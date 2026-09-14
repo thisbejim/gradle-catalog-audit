@@ -1,0 +1,15 @@
+[versions]
+ok = "1.0"
+stale = "9.9"
+
+[libraries]
+foo-bar = { module = "example:foo", version.ref = "ok" }
+foo_bar = { module = "example:other", version = "1.0" }
+broken = { module = "example:broken", version.ref = "missing" }
+number = 3
+
+[bundles]
+test = ["does-not-exist"]
+
+[plugins]
+plugins-tool = { id = "example.plugin", version.ref = "ok" }
