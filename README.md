@@ -2,7 +2,7 @@
 
 Offline CI lint for Gradle version catalogs and the build scripts that consume them.
 
-Gradle's `libs.versions.toml` gives a project type-safe accessors, but a catalog can
+Gradle's `libs.versions.toml` gives a project type-safe dependency accessors, but a catalog can
 quietly drift: unused aliases are ignored, a bundle can name a removed library, or a
 large multi-module build can use a misspelled accessor. `gradle-catalog-audit` checks
 that seam in one fast, read-only command—without starting Gradle or resolving a
@@ -16,10 +16,10 @@ Audited 1 catalog(s) and 4 build script(s): 0 error(s), 0 warning(s).
 No findings.
 ```
 
-Or install the released package:
+Or install the attached wheel directly from the release:
 
 ```console
-python -m pip install gradle-catalog-audit
+python -m pip install https://github.com/thisbejim/gradle-catalog-audit/releases/download/v0.1.0/gradle_catalog_audit-0.1.0-py3-none-any.whl
 gradle-catalog-audit .
 ```
 
