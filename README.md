@@ -2,7 +2,7 @@
 
 Offline CI lint for Gradle version catalogs and the build scripts that consume them.
 
-Gradle's `libs.versions.toml` gives a project type-safe dependency accessors, but a catalog can
+Gradle's `libs.versions.toml` exposes type-safe dependency accessors, but a catalog can
 quietly drift: unused aliases are ignored, a bundle can name a removed library, or a
 large multi-module build can use a misspelled accessor. `gradle-catalog-audit` checks
 that seam in one fast, read-only command—without starting Gradle or resolving a
